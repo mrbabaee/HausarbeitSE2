@@ -1,0 +1,17 @@
+org\bonn\se\carlook\process\control\JDBCConectionTest.class
+org\bonn\se\carlook\MockitoTest\MockitoLogin$LoginControlTest.class
+org\bonn\se\carlook\process\control\RegisterControlTest.class
+org\bonn\se\carlook\process\control\LoginControlTest.class
+org\bonn\se\carlook\test\util\KundeBuilder.class
+org\bonn\se\carlook\model\dao\KundeDAOTest.class
+org\bonn\se\carlook\model\dao\GenericDAOTest.class
+org\bonn\se\carlook\model\dao\RoleDAOTest.class
+org\bonn\se\carlook\test\util\UserDTOBuilder.class
+org\bonn\se\carlook\test\util\UserBuilder.class
+org\bonn\se\carlook\test\util\VertrieblerDTOBuilder.class
+org\bonn\se\carlook\test\util\GenericBuilder.class
+org\bonn\se\carlook\test\util\KundeDTOBuilder.class
+org\bonn\se\carlook\model\dao\VertrieblerDAOTest.class
+org\bonn\se\carlook\model\dao\UserDAOTest.class
+org\bonn\se\carlook\MockitoTest\MockitoLogin.class
+org\bonn\se\carlook\test\util\VertrieblerBuilder.class
