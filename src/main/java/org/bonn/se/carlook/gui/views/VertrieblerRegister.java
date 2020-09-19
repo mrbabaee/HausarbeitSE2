@@ -11,7 +11,7 @@ import org.bonn.se.carlook.gui.components.Footer;
 import org.bonn.se.carlook.gui.components.Header;
 import org.bonn.se.carlook.model.objects.dto.VertrieblerDTO;
 import org.bonn.se.carlook.process.control.RegisterControl;
-import org.bonn.se.carlook.process.control.exceptions.CompanyAlreadyRegisteredException;
+import org.bonn.se.carlook.process.control.exceptions.VertrieblerSchonRegistriertException;
 import org.bonn.se.carlook.process.control.exceptions.UserAlreadyRegisteredException;
 import org.bonn.se.carlook.services.util.GlobalHelper;
 import org.bonn.se.carlook.services.util.Globals;
@@ -91,22 +91,6 @@ public class VertrieblerRegister extends VerticalLayout implements View {
 
         HorizontalLayout anredeLayout= new HorizontalLayout();
 
-        /*Label label2 = new Label("Anrede");
-        CheckBox checkbox1 = new CheckBox("Frau");
-        CheckBox checkbox2 = new CheckBox("Herr");
-
-        checkbox1.addValueChangeListener(event ->
-                checkbox2.setValue(! checkbox1.getValue()));
-
-        checkbox2.addValueChangeListener(event ->
-                checkbox1.setValue(! checkbox2.getValue()));
-
-        anredeLayout.addComponent(label2);
-        anredeLayout.addComponent(checkbox1);
-        anredeLayout.addComponent(checkbox2);
-
-         */
-
         form2.addComponent(anredeLayout);
 
 
@@ -133,81 +117,6 @@ public class VertrieblerRegister extends VerticalLayout implements View {
         tf3.setRequiredIndicatorVisible(true);
         form2.addComponent(tf3);
 
-        //FormLayout form1 = new FormLayout();
-
-        /*TextField tf4 = new TextField("Firma");
-        tf4.setRequiredIndicatorVisible(true);
-        form1.addComponent(tf4);
-        TextField tf5 = new TextField("Abteilung");
-        form1.addComponent(tf5);
-
-        TextField tf9 = new TextField("Straße");
-        tf9.setRequiredIndicatorVisible(true);
-        form1.addComponent(tf9);
-        TextField tf6 = new TextField("Hausnummer");
-        tf6.setRequiredIndicatorVisible(true);
-        form1.addComponent(tf6);
-        TextField tf7 = new TextField("PLZ");
-        tf7.setRequiredIndicatorVisible(true);
-        form1.addComponent(tf7);
-        TextField tf8 = new TextField("Ort");
-        tf8.setRequiredIndicatorVisible(true);
-        form1.addComponent(tf8);
-
-         */
-        /*NativeSelect<String> select = new NativeSelect<>("Land");
-        select.setItems("Deutschland", "Frankreich" , "Belgien", "Italien", "Spanien","Österreich");
-        select.setValue("Deutschland");
-        form1.addComponent(select);
-        TextField tf10 = new TextField("Webseite");
-        form1.addComponent(tf10);
-
-        Label label1= new Label("Kontaktdaten");
-        label1.addStyleName("panel_FirmaRegister_small");
-        label1.setWidth("100%");
-
-
-
-
-        FormLayout form2 = new FormLayout();
-
-      HorizontalLayout anredeLayout= new HorizontalLayout();
-
-        Label label2 = new Label("Anrede");
-        CheckBox checkbox1 = new CheckBox("Frau");
-        CheckBox checkbox2 = new CheckBox("Herr");
-
-        checkbox1.addValueChangeListener(event ->
-                checkbox2.setValue(! checkbox1.getValue()));
-
-        checkbox2.addValueChangeListener(event ->
-                checkbox1.setValue(! checkbox2.getValue()));
-
-        anredeLayout.addComponent(label2);
-        anredeLayout.addComponent(checkbox1);
-        anredeLayout.addComponent(checkbox2);
-
-        form2.addComponent(anredeLayout);
-
-
-        NativeSelect<String> select1 = new NativeSelect<>("Anrede");
-        select1.setItems("Bitte auswählen", "Herr", "Frau");
-        select1.setValue("Bitte auswählen");
-        form2.addComponent(select1);
-
-        TextField tf11 = new TextField("Nachname");
-        tf11.setRequiredIndicatorVisible(true);
-        form2.addComponent(tf11);
-        TextField tf12 = new TextField("Vorname");
-        tf12.setRequiredIndicatorVisible(true);
-        form2.addComponent(tf12);
-        TextField tf13 = new TextField("Telefon");
-        tf13.setRequiredIndicatorVisible(true);
-        form2.addComponent(tf13);
-        TextField tf14 = new TextField("Fax");
-        form2.addComponent(tf14);
-
-         */
 
 
         Button button = new Button("Registrieren", FontAwesome.SIGN_IN);
@@ -229,8 +138,6 @@ public class VertrieblerRegister extends VerticalLayout implements View {
         verticalLayoutBody.setComponentAlignment(button, Alignment.MIDDLE_CENTER);
 
 
-        //layout.addComponent(barmenu);
-        //layout.setComponentAlignment(barmenu, Alignment.TOP_CENTER);
 
         layout.addComponent(verticalLayoutBody);
 
@@ -254,17 +161,7 @@ public class VertrieblerRegister extends VerticalLayout implements View {
                 vertrieblerDTO.setEMail(tf1.getValue());
                 vertrieblerDTO.setPassword(tf2.getValue());
                 vertrieblerDTO.setPassword(tf3.getValue());
-                /*companyDTO.setCountry(tf9.getValue());
-                vertrieblerDTO.setPhone(tf13.getValue());
-                vertrieblerDTO.setPostalCode(tf7.getValue());
-                vertrieblerDTO.setStreet(tf9.getValue());
-                vertrieblerDTO.setWebsite(tf10.getValue());
-                vertrieblerDTO.setStreetNumber(tf6.getValue());
-                vertrieblerDTO.setPostalCodeArea(tf8.getValue());
-                vertrieblerDTO.setContactPerson(tf12.getValue() + " " + tf11.getValue());
-                vertrieblerDTO.setCompanyName(tf4.getValue());
 
-                 */
 
                 RegistrationResult<VertrieblerDTO> result = null;
 
@@ -276,7 +173,7 @@ public class VertrieblerRegister extends VerticalLayout implements View {
                     notification.setDelayMsec(5000);
                     notification.show(Page.getCurrent());
                     return;
-                } catch (CompanyAlreadyRegisteredException e) {
+                } catch (VertrieblerSchonRegistriertException e) {
                     Notification notification= new  Notification("Fehler",
                             "Das Unternehmen ist bereits registriert!", Notification.Type.ERROR_MESSAGE);
                     notification.setDelayMsec(5000);
@@ -303,25 +200,7 @@ public class VertrieblerRegister extends VerticalLayout implements View {
                             registrationErrors += ", " + fail.name();
                     }
 
-                    /*List<RegistrationResult.FailureType> failList = result.getReasons();
 
-                    if(failList.contains(RegistrationResult.FailureType.FIRSTNAME_MISSING) )
-                        registrationErrors = "Nachname fehlt";
-                    if(failList.contains( RegistrationResult.FailureType.LASTNAME_MISSING))
-                        registrationErrors+= ", Vorname fehlt";
-                    if(failList.contains( RegistrationResult.FailureType.EMAIL_MISSING))
-                        registrationErrors+= ", Email fehlt";
-                    if(failList.contains( RegistrationResult.FailureType.PASSWORD_MISSING))
-                        registrationErrors+= ", Passwort fehlt.";
-
-                    else {
-                       registrationErrors="Bitte füllen Sie alle Felder aus!";
-                    }
-
-                    if (tf1.isEmpty() || tf2.isEmpty() || tf3.isEmpty() || tf4.isEmpty() || tf6.isEmpty() || tf7.isEmpty() || tf8.isEmpty()|| tf11.isEmpty() || tf12.isEmpty() || tf13.isEmpty() || select.isEmpty() ){
-                        registrationErrors="Bitte füllen Sie alle mit '*' markierten Felder aus!";
-
-                     */
                     }
 
                     Notification notification= new  Notification(registrationErrors, Notification.Type.ERROR_MESSAGE);

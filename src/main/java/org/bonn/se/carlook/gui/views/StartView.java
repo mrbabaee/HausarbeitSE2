@@ -26,13 +26,6 @@ public class StartView extends VerticalLayout implements View {
         this.addComponent(horizontalHeader1);
         this.setComponentAlignment(horizontalHeader1, Alignment.TOP_CENTER);
 
-        //horizontalHeader1.addComponentsAndExpand(header);
-
-        //horizontalHeader1.setComponentAlignment(header, Alignment.TOP_RIGHT);
-
-        //layout.addComponent(horizontalHeader1);
-        //
-
         // Horizontale-Section für Logo
         HorizontalLayout horizontalHeader = new HorizontalLayout();
         //Horizontale-Section Für Text etc.
@@ -41,7 +34,7 @@ public class StartView extends VerticalLayout implements View {
         HorizontalLayout horizontalLayoutFooter = new HorizontalLayout();
 
         //Komponenten erstellen:
-        Label labelBegrüssung = new Label ("Herzlich Willkommen auf CarLook!");
+        Label labelBegrüssung = new Label ("Herzlich Willkommen zu CarLook!");
 
         // Buttons sollen zur LoginView & RegisterView navigieren
 

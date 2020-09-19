@@ -20,8 +20,8 @@ public class MockitoLogin {
 
     @Mock
     private VaadinSession session;
-    private String rohad;
-    private String abc;
+    private String mohammad;
+    private String ab;
 
     @RunWith(MockitoJUnitRunner.class)
     public class LoginControlTest {
@@ -40,7 +40,7 @@ public class MockitoLogin {
         @Test
         public boolean testLogin() throws NoSuchUserOrPassword { // Führe Test durch mit den simulierten Objekten
 
-            LoginControl.getInstance().checkAuthentication(rohad, abc);
+            LoginControl.getInstance().checkAuthentication(mohammad, ab);
 
             return true;
         }

@@ -37,49 +37,5 @@ public class LoginControlTest {
             myui.getNavigator().navigateTo(Views.LOGIN);
         }
 
-      //  @Test
-     //   public boolean testLogin() throws NoSuchUserOrPassword { // Führe Test durch mit den simulierten Objekten
 
-       //     LoginControl.getInstance().checkAuthentication(rohad, abc);
-
-         //   return true;
-        // }
-
-
-
-
-
-    /*@Test
-    public void TestLoginSuccess() throws SQLException {
-        String email = "dennis.baum@smail.inf.h-brs.de";
-        String password = "topSecretPassword";
-
-        String actualMessage = null;
-        String expectedMessage = "NoSuchUserOrPassword";
-
-        try {
-            LoginControl.getInstance().checkAuthentication(email, password);
-        } catch(NoSuchUserOrPassword ex){
-            actualMessage = ex.getMessage();
-        }
-
-        assertNull(actualMessage);
-    }
-
-    @Test
-    public void TestLoginFailure() throws SQLException {
-        String email = "dennis.baum@smail.inf.h-brs.de";
-        String password = "";
-
-        String actualMessage = "";
-        String expectedMessage = "NoSuchUserOrPassword";
-
-        try {
-            LoginControl.getInstance().checkAuthentication(email, password);
-        } catch(NoSuchUserOrPassword ex){
-            actualMessage = ex.getMessage();
-        }
-
-        assertTrue(actualMessage.contains(expectedMessage));
-    }*/
 }

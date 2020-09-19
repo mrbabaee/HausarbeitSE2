@@ -33,46 +33,6 @@ public class VertrieblerDTOBuilder {
         return this;
     }
 
-    /*public VertrieblerDTOBuilder withStreet(String street) {
-        vertrieblerDTO.setStreet(street);
-        return this;
-    }
-
-    public VertrieblerDTOBuilder withStreetNumber(String streetNumber) {
-        vertrieblerDTO.setStreetNumber(streetNumber);
-        return this;
-    }
-
-    public VertrieblerDTOBuilder withPostalCode(String postalCode) {
-        vertrieblerDTO.setPostalCode(postalCode);
-        return this;
-    }
-
-    public VertrieblerDTOBuilder withPostalCodeArea(String postalCodeArea) {
-        vertrieblerDTO.setPostalCodeArea(postalCodeArea);
-        return this;
-    }
-
-    public VertrieblerDTOBuilder withPhone(String phone) {
-        vertrieblerDTO.setPhone(phone);
-        return this;
-    }
-
-    public VertrieblerDTOBuilder withFax(String fax) {
-        vertrieblerDTO.setFax(fax);
-        return this;
-    }
-
-    public VertrieblerDTOBuilder withWebsite(String website) {
-        vertrieblerDTO.setWebsite(website);
-        return this;
-    }
-
-    public VertrieblerDTO build() {
-        return vertrieblerDTO;
-    }
-
-     */
 }
 
 

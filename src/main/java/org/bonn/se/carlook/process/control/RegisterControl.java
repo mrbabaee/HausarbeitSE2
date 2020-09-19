@@ -11,7 +11,7 @@ import org.bonn.se.carlook.model.objects.dto.UserDTO;
 import org.bonn.se.carlook.model.objects.entities.Vertriebler;
 import org.bonn.se.carlook.model.objects.entities.Kunde;
 import org.bonn.se.carlook.model.objects.entities.User;
-import org.bonn.se.carlook.process.control.exceptions.CompanyAlreadyRegisteredException;
+import org.bonn.se.carlook.process.control.exceptions.VertrieblerSchonRegistriertException;
 import org.bonn.se.carlook.process.control.exceptions.UserAlreadyRegisteredException;
 import org.bonn.se.carlook.services.util.RegistrationResult;
 import org.bonn.se.carlook.services.util.RegistrationResult.FailureType;
@@ -104,7 +104,7 @@ public class RegisterControl {
         return result;
     }
 
-    public RegistrationResult<VertrieblerDTO> registerCompany(VertrieblerDTO vertrieblerDTO) throws UserAlreadyRegisteredException, CompanyAlreadyRegisteredException {
+    public RegistrationResult<VertrieblerDTO> registerCompany(VertrieblerDTO vertrieblerDTO) throws UserAlreadyRegisteredException, VertrieblerSchonRegistriertException {
         RegistrationResult<VertrieblerDTO> result = new RegistrationResult<>();
 
         checkStandardValues(vertrieblerDTO);
@@ -130,7 +130,7 @@ public class RegisterControl {
         Vertriebler vertriebler = vertrieblerDAO.select(vertrieblerDTO.getVertrieblerNachname());
 
         if(!StringIsEmptyOrNull(vertriebler.getLastName())){
-            throw new CompanyAlreadyRegisteredException();
+            throw new VertrieblerSchonRegistriertException();
         }
 
         vertriebler = VertrieblerFactory.createEntityFromDTO(vertrieblerDTO);

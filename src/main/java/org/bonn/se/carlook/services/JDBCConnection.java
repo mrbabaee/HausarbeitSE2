@@ -8,7 +8,7 @@ import java.util.logging.Logger;
 public class JDBCConnection {
 
 
-    //Tutorial Nr. 6
+    //Tutorial Nr. 6-8
 
     private static JDBCConnection connection = null;
     private Logger logger;

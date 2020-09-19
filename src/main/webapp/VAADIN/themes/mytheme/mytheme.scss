@@ -35,7 +35,7 @@
 @mixin mytheme {
   @include valo;
   //General Layout - Start
-  .v-ui {
+ .v-ui {
     content: "";
     top: 0;
     left: 0;
@@ -127,7 +127,8 @@
     text-align: center;
     border: none;
     outline: none;
-    background: #F26101;
+    //background: #F26101;
+    background: #01f241;
     box-shadow: none;
   }
 
@@ -174,7 +175,8 @@
   }
   .mytitel{
     font-family: Helvetica, Arial, Verdana, Tahoma, sans-serif;
-    color: #0957a6;
+    //color: #0957a6;
+    color: #0973db;
     padding: 10px;
     font-size: 18px;
   }
@@ -195,15 +197,16 @@
 }
 //Login - Panel End
 
-//Joboffer View - Start
-.mytitle_joboffer{
+
+.mytitle_Auto{
   font-family: Helvetica, Arial, Verdana, Tahoma, sans-serif;
   font-size: 18px;
   font-weight: bolder;
   color: #304269;
   text-align: center;
 }
-//Joboffer View - End
+
+
 
 
 

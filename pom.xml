@@ -4,13 +4,13 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>org.bonn.se</groupId>
-	<artifactId>CollHBRS</artifactId>
+	<artifactId>carlook</artifactId>
 	<packaging>war</packaging>
 	<version>1.0</version>
 	<modules>
 
 	</modules>
-	<name>CollHBRS</name>
+	<name>Carlook</name>
 
 	<prerequisites>
 		<maven>3</maven>
@@ -61,7 +61,11 @@
 			<artifactId>postgresql</artifactId>
 			<version>42.2.12</version>
 		</dependency>
-
+		<dependency>
+			<groupId>postgresql</groupId>
+			<artifactId>postgresql</artifactId>
+			<version>9.1-901-1.jdbc4</version>
+		</dependency>
 		<dependency>
 			<groupId>com.vaadin</groupId>
 			<artifactId>vaadin-server</artifactId>

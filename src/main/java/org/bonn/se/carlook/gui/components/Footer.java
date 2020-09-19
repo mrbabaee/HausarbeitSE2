@@ -6,7 +6,7 @@ import com.vaadin.ui.HorizontalLayout;
 
 
 public class Footer extends HorizontalLayout {
-    // ToDo: Jamma
+
     public Footer (){
         this.setStyleName("footer_main");
         HorizontalLayout hlayout = new HorizontalLayout();

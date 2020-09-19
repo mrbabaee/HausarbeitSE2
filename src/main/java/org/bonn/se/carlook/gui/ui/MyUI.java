@@ -28,14 +28,13 @@ public class MyUI extends UI {
          //aktuelles UI-Objekt + Container
         navigator = new Navigator( this,this );
 
-        //https://vaadin.com/docs/v8/framework/advanced/advanced-navigator.html
-        //alle erforderlichen Views registrieren
-        navigator.addView(Views.MAIN, (Class<? extends View>) MainView.class); //Cast notwendig
+
+        navigator.addView(Views.MAIN, (Class<? extends View>) MainView.class);
         navigator.addView(Views.LOGIN, (Class<? extends View>) LoginView.class);
         navigator.addView(Views.Kunde, (Class<? extends View>) KundeRegister.class);
         navigator.addView(Views.Vertriebler, (Class<? extends View>) VertrieblerRegister.class);
-        navigator.addView(Views.JOBOFFER, (Class<? extends View>) JobOfferView.class);
-        navigator.addView(Views.CREATEJOB, (Class<? extends View>) CreateJobView.class);
+        navigator.addView(Views.AutoSuche, (Class<? extends View>) AutoView.class);
+
 
 
 

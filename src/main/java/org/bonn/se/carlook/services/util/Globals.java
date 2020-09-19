@@ -15,7 +15,7 @@ public class Globals {
     public static final String TABLE_STUDENT = "tab_student";
     public static final String TABLE_COMPANY = "tab_unternehmen";
     public static final String TABLE_JOBOFFER = "tab_stellenanzeige";
-    public static final String TABLE_APPLICATION = "tab_bewerbung";
+    public static final String TABLE_Auto = "tab_bewerbung";
 
     public static final String TABLE_USER_FIRSTNAME = "vorname";
     public static final String TABLE_USER_EMAIL = "email";

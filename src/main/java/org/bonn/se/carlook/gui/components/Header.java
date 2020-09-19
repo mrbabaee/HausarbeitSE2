@@ -47,7 +47,7 @@ public class Header extends HorizontalLayout {
         bar.addStyleName("mytitle");
         MenuItem item1 = bar.addItem("Kunden");
         MenuItem item2 = bar.addItem("Vertriebler");
-        MenuItem item3 = bar.addItem("Jobbörse");
+        MenuItem item3 = bar.addItem("Services");
         MenuItem item4 = bar.addItem("Karriere");
         MenuItem item5 = bar.addItem("Kontakt");
 
@@ -71,7 +71,7 @@ public class Header extends HorizontalLayout {
 
             @Override
             public void menuSelected(MenuBar.MenuItem selectedItem) {
-                UI.getCurrent().getNavigator().navigateTo(Views.JOBOFFER);
+                UI.getCurrent().getNavigator().navigateTo(Views.AutoSuche);
             }
         });
 

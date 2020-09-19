@@ -34,40 +34,36 @@ public class MainView extends VerticalLayout implements View {
       //  HorizontalLayout buttonLayout = new HorizontalLayout();
 
 
-        Label welcome = new Label("Willkommen zu deinem Profil !"); //+ loggedInUserDTO.getFirstName());
+        Label welcome = new Label("Willkommen zu deinem Profil " + loggedInUserDTO.getFirstName() + "!");
 
 
         bodylayout.addComponent(welcome);
 
-        Button btnShowJobOffers = new Button("Stellenausschreibungen");
-        btnShowJobOffers.setIcon(FontAwesome.USERS);
-        btnShowJobOffers.addStyleName("mystyle");
+        Button btnShowAutos = new Button("Auto Suchen");
+        btnShowAutos.setIcon(FontAwesome.SEARCH);
+        btnShowAutos.addStyleName("mystyle");
 
-        btnShowJobOffers.addClickListener(new Button.ClickListener() {
+        btnShowAutos.addClickListener(new Button.ClickListener() {
             @Override
             public void buttonClick(Button.ClickEvent clickEvent) {
-                UI.getCurrent().getNavigator().navigateTo(Views.JOBOFFER);
+                UI.getCurrent().getNavigator().navigateTo(Views.AutoSuche);
             }
         });
 
-        //Stellenanzeige erstellen Button
-        Button btnCreateJob = new Button("Stellenanzeige erstellen");
-        btnCreateJob.setIcon(FontAwesome.WINDOWS);
-        btnCreateJob.addStyleName("mystyle");
+        //Auto eintragen Button
+        Button btnAddAuto = new Button("Neues Auto eintragen");
+        btnAddAuto.setIcon(FontAwesome.WINDOWS);
+        btnAddAuto.addStyleName("mystyle");
 
-        btnCreateJob.addClickListener(new Button.ClickListener() {
+        btnAddAuto.addClickListener(new Button.ClickListener() {
             @Override
             public void buttonClick(Button.ClickEvent clickEvent) {
-                UI.getCurrent().getNavigator().navigateTo(Views.CREATEJOB);
+                UI.getCurrent().getNavigator().navigateTo(Views.AddAuto);
             }
         });
 
 
-
-        /*buttonLayout.addComponent(btnShowJobOffers);
-        buttonLayout.addComponent(btnCreateJob);
-*/
-        bodylayout.addComponent(btnShowJobOffers);
+        bodylayout.addComponent(btnShowAutos);
 
         layout.addComponent(bodylayout);
 
@@ -76,8 +72,4 @@ public class MainView extends VerticalLayout implements View {
         this.setComponentAlignment(footerLogin, Alignment.BOTTOM_CENTER);
     }
 
-
-
-
-    // Main-View für personalisierten Bereich nach erfolgreichem Login
 }

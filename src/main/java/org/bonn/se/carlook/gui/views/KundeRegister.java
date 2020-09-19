@@ -233,38 +233,17 @@ public class KundeRegister extends VerticalLayout implements View {
                    for (RegistrationResult.FailureType item : failList) {
                        System.out.println(item);
 
-                    /*   if(failList.contains(RegistrationResult.FailureType.FIRSTNAME_MISSING) ){
-                           fehler = "Nachname fehlt";
-                       } if(failList.contains( RegistrationResult.FailureType.LASTNAME_MISSING)){
-                               fehler+= ", Vorname fehlt";
-                       } if(failList.contains( RegistrationResult.FailureType.EMAIL_MISSING)){
-                                   fehler+= ", Email fehlt";
-                       }   if(failList.contains( RegistrationResult.FailureType.PASSWORD_MISSING)){
-                                       fehler+= ", Passwort fehlt.";
 
-                       }
-                       else {
-                           fehler="Bitte alle Feldern ausfühlen";
-                       }*/
                       if (tf1.isEmpty() || tf2.isEmpty() || tf3.isEmpty() || tf4.isEmpty() ){
                            fehler="Bitte füllen Sie alle mit '*' markierten Felder aus!";
                       }
 
-                      /*    else if(tf1.isEmpty()){
-                           fehler = "Nachname fehlt";
-                      }
-                        else if(tf2.isEmpty()){
-                           fehler = "Vorname fehlt";
-                      }
-                         else if (){
-                             fehler = "FEHLER";
-                    }*/
                       Notification notification= new  Notification(fehler, Notification.Type.ERROR_MESSAGE);
                       notification.setDelayMsec(5000);
                       notification.show(Page.getCurrent());
 
                    }
-                  // Notification.show("Kein Erfolg!", "Nicht Erfolgreich ", Notification.Type.ERROR_MESSAGE);
+
                 }
             }
          });

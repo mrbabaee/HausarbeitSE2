@@ -101,10 +101,10 @@ public class RegisterControlTest {
 
     @Test
     public void TestStudentAlreadyRegistered() {
-        String firstName = "Dennis";
-        String lastName = "Baum";
-        String email = "abcdefgh";
-        String password = "topSecretPassword";
+        String firstName = "Mohammad";
+        String lastName = "Babaee";
+        String email = "mb@carlook.de";
+        String password = "mb123";
 
         String actualMessage = "";
         String expectedMessage = "UserAlreadyRegisteredException";
@@ -129,10 +129,10 @@ public class RegisterControlTest {
 
     @Test
     public void TestStudentRegistrationSuccess(){
-        String firstName = "Dennis";
-        String lastName = "Baum";
+        String firstName = "Mohammad";
+        String lastName = "Babaee";
         String email = UUID.randomUUID().toString().substring(0, 15);
-        String password = "topSecretPassword";
+        String password = "mb123";
 
         String actualMessage = "";
         String expectedMessage = "UserAlreadyRegisteredException";
@@ -157,35 +157,5 @@ public class RegisterControlTest {
         assertTrue(result.getResult());
     }
 
-    /*@Test
-    public void TestCompanyRegistrationSuccess(){
-        String firstName = "Dennis";
-        String lastName = "Baum";
-        String email = UUID.randomUUID().toString().substring(0, 15);
-        String password = "topSecretPassword";
 
-        String actualMessage = " ";
-        String expectedMessageA = "UserAlreadyRegisteredException";
-        String expectedMessageB = "CompanyAlreadyRegisteredException";
-
-        CompanyDTOBuilder builder = new CompanyDTOBuilder();
-        CompanyDTO companyDTO = builder.createNewBusinessman()
-                .withFirstName(firstName)
-                .withLastName(lastName)
-                .withEMail(email)
-                .withPassword(password)
-                .build();
-
-        RegistrationResult<CompanyDTO> result = null;
-        try {
-            result = RegisterControl.getInstance().registerCompany(companyDTO);
-        } catch(CompanyAlreadyRegisteredException | UserAlreadyRegisteredException e){
-            actualMessage += e.getMessage();
-        }
-
-        assertFalse(actualMessage.contains(expectedMessageA));
-        assertFalse(actualMessage.contains(expectedMessageB));
-        assert result != null;
-        assertTrue(result.getResult());
-    }*/
 }

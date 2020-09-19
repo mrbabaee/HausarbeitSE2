@@ -43,18 +43,18 @@ public class HeaderMainView extends HorizontalLayout {
         //Menubar/Header
         MenuBar bar = new MenuBar();
         bar.addStyleName("mytitle");
-        MenuItem item1 = bar.addItem("Meine Jobs");
-        MenuItem item2 = bar.addItem("Meine Bewerbungen");
-        MenuItem item3 = bar.addItem("Jobbörse");
-        MenuItem item4 = bar.addItem("Profil bearbeiten");
-        MenuItem item5 = bar.addItem("Info & Kontakt");
+        MenuItem item1 = bar.addItem("Profil bearbeiten");
+        MenuItem item2 = bar.addItem("Meine Reservierungen");
+        MenuItem item3 = bar.addItem("Dienste");
+        MenuItem item4 = bar.addItem("Hilfe");
+        MenuItem item5 = bar.addItem("Kontakt");
 
 
         item3.setCommand(new MenuBar.Command() {
 
             @Override
             public void menuSelected(MenuItem selectedItem) {
-                UI.getCurrent().getNavigator().navigateTo(Views.JOBOFFER);
+                UI.getCurrent().getNavigator().navigateTo(Views.AutoSuche);
             }
         });
 

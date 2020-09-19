@@ -1627,7 +1627,7 @@ div.v-layout.v-horizontal.v-widget {
 	vertical-align: top;
 }
 
-.mytitle_joboffer {
+.mytitle_Auto {
 	font-family: Helvetica, Arial, Verdana, Tahoma, sans-serif;
 	font-size: 18px;
 	font-weight: bolder;
@@ -15517,7 +15517,7 @@ div.v-layout.v-horizontal.v-widget {
 	text-align: center;
 	border: none;
 	outline: none;
-	background: #F26101;
+	background: #01f241;
 	box-shadow: none;
 }
 
@@ -15558,7 +15558,7 @@ div.v-layout.v-horizontal.v-widget {
 
 .mytheme .mytitel {
 	font-family: Helvetica, Arial, Verdana, Tahoma, sans-serif;
-	color: #0957a6;
+	color: #0973db;
 	padding: 10px;
 	font-size: 18px;
 }
